@@ -1,0 +1,34 @@
+dependencies: \
+  /Users/shashvatkedia/Desktop/Snuhacks/node_modules/react-native/Libraries/Image/RCTImageViewManager.m \
+  /Users/shashvatkedia/Desktop/Snuhacks/node_modules/react-native/Libraries/Image/RCTImageViewManager.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTResizeMode.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestHandler.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/node_modules/react-native/Libraries/Image/RCTImageShadowView.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/shashvatkedia/Desktop/Snuhacks/node_modules/react-native/Libraries/Image/RCTImageView.h
