@@ -13,8 +13,7 @@
     "querystring": "^0.2.0",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
-    "react-native-cheerio": "^1.0.0-rc.4",
-    "request": "^2.88.0"
+    "react-native-cheerio": "^1.0.0-rc.4"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
