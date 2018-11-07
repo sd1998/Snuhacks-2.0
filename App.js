@@ -1,13 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+const cheerio = require('react-native-cheerio')
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,17 +13,6 @@ type Props = {};
 export default class App extends Component<Props> {
 
   componentDidMount() {
-
-    /*data = {
-      "login_user_name": "sk261",
-      "login_password": "Dnisg@12344"
-    }
-    request.post({url:"https://markattendance.webapps.snu.edu.in/public/application/login/loginAuthSubmit",formData: data},function optionalCallback(err,response,body){
-      if(err){
-        console.log(err)
-      }
-      console.log(response)
-      })*/
       fetch("https://markattendance.webapps.snu.edu.in/public/application/login/loginAuthSubmit",
       {"method": "POST","credentials":"same-origin",
       "headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -50,21 +32,23 @@ export default class App extends Component<Props> {
          "body":null,
          "method":"GET",
          "mode":"cors"}).then((response) => {
-           console.log(response._bodyText)
+           const $ = cheerio.load(response._bodyText)
+           for(var i=0;i<$('tbody').children('tr').length;i++){
+             for(var j=0;j < $('tbody').children($('tr')[i]).children('td').length;j++){
+               if(j == $('tbody').children($('tr')[i]).children('td').length - 1){
+                 console.log(($('tbody').children($('tr')[i]).children('td'))[j].children[0].children[0].data)
+               }
+               else{
+                 console.log(($('tbody').children($('tr')[i]).children('td'))[j].children[0].data)
+             }
+             }
+           }
            }).catch((err) => {
              console.log(err)
              });
         }).catch((err) => {
           console.log(err)
         })
-    /*return fetch("https://markattendance.webapps.snu.edu.in/public/application/login/login").then((response) => {
-      const $ = cheerio.load(response._bodyText)
-      $(".panel-body").each(function(index,articles){
-        console.log(articles)
-      })
-    }).catch((err) => {
-      console.log(err)
-    });*/
   }
 
   render() {
