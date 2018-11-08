@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 import {Platform,StyleSheet,Text,View} from 'react-native';
 const cheerio = require('react-native-cheerio');
-import {connect} from 'react-redux/native';
-import * as Actions from './action.js';
+import {connect} from 'react-redux';
+import Actions from './actions.js';
 
 function mapStateToProps(state){
   return {

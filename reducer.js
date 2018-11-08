@@ -1,9 +1,12 @@
-import Navigator from './navigator.js';
+import {AppNavigator} from './navigator.js';
 import {NavigationActions} from 'react-navigation';
 
 const initialAction = {type: NavigationActions.Init}
-const initialState = Navigator.route.getStateForAction(initialAction)
+const initialState = AppNavigator.router.getStateForAction(initialAction)
 
 export default (state = initialState,action) => {
-  return {...state}
+  switch(action.type){
+    default:
+    return AppNavigator.router.getStateForAction(action,state)
+  }
 }

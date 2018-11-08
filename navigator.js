@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import AttendanceComponent from './Attendance.js'
 import Home from './Home.js'
 
-const AppNavigator  = StackNavigator({
+export const AppNavigator  = new StackNavigator({
   Home: {screen: Home},
   Attendance: {screen: AttendanceComponent}
 },{
