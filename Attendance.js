@@ -1,26 +1,26 @@
 import React,{Component} from 'react';
-import {Platform,StyleSheet,Text,View,Button} from 'react-native';
-const cheerio = require('react-native-cheerio');
+import {View,Button} from 'react-native';
 import {connect} from 'react-redux';
+const cheerio = require('react-native-cheerio');
 import Actions from './actions.js';
 
 function mapStateToProps(state){
   return {
-    currentAttendance: state.currentAttendance
+    currentAttendance: state.attendance.currentAttendance
   }
 }
 
 function mapDispatchToProps(dispatch){
   return{
-    updateCurrentAttendance : function(currentAttendance){
+    updateCurrentAttendance : (currentAttendance) => {
       dispatch(Actions.updateCurrentAttendance(currentAttendance))
     }
   }
 }
 
-export default class AttendanceComponent extends React.Component{
-  constructor(){
-    super()
+class AttendanceComponent extends Component{
+  constructor(props){
+    super(props)
   }
 
   getAttendance = () => {
@@ -46,14 +46,40 @@ export default class AttendanceComponent extends React.Component{
        "mode":"cors"}).then((response) => {
          const $ = cheerio.load(response._bodyText)
          for(var i=0;i<$('tbody').children('tr').length;i++){
+           var subd = ""
+           var subdata = {}
            for(var j=0;j < $('tbody').children($('tr')[i]).children('td').length;j++){
              if(j == $('tbody').children($('tr')[i]).children('td').length - 1){
-               console.log(($('tbody').children($('tr')[i]).children('td'))[j].children[0].children[0].data)
+               subd = ($('tbody').children($('tr')[i]).children('td'))[j].children[0].children[0].data
              }
              else{
-               console.log(($('tbody').children($('tr')[i]).children('td'))[j].children[0].data)
+               subd = ($('tbody').children($('tr')[i]).children('td'))[j].children[0].data
+             }
+             switch(j){
+               case 0:
+               subdata.CourseCode = subd
+               break
+               case 1:
+               subdata.CourseName = subd
+               break
+               case 2:
+               subdata.EnrollmentDate = subd
+               break
+               case 3:
+               subdata.ClassCond = subd
+               break
+               case 4:
+               subdata.ClassAtten = subd
+               break;
+               case 5:
+               subdata.OffiLeave = subd
+               break;
+               case 6:
+               subdata.AttendancePer = subd
+               break;
+             }
            }
-           }
+           this.props.updateCurrentAttendance(subdata)
          }
          }).catch((err) => {
            console.log(err)
@@ -73,3 +99,6 @@ export default class AttendanceComponent extends React.Component{
     )
   }
 }
+
+var AttendanceComponentR = connect(mapStateToProps,mapDispatchToProps)(AttendanceComponent)
+export default AttendanceComponentR

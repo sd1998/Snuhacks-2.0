@@ -15,10 +15,10 @@
     "react-native": "0.57.4",
     "react-native-cheerio": "^1.0.0-rc.4",
     "react-navigation": "^1.0.0-beta.15",
-    "react-navigation-redux-helpers": "^2.0.8",
     "react-redux": "^5.1.0",
     "redux": "^4.0.1",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

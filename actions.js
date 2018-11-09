@@ -4,7 +4,7 @@ const Actions = {
   updateCurrentAttendance: (currentAttendance) => {
     return {
       type: Constants.UPDATE_CURRENT_ATTENDANCE,
-      currentAttendance: currentAttendance
+      payload: currentAttendance
     }
   }
 }
