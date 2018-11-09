@@ -11,12 +11,14 @@ export const AppNavigator  = new StackNavigator({
   initialRouteName: 'Home'
 })
 
+export const InitState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams("Home"))
+
 class Navigator extends Component<>{
   render(){
     return(
       <AppNavigator navigation={addNavigationHelpers({
         dispatch: this.props.dispatch,
-        state: this.props.state
+        state: this.props.navigation
       })}
       />
     )
@@ -25,8 +27,10 @@ class Navigator extends Component<>{
 
 const mapStateToProps = function(state){
   return {
-    navigation: state.navigation
+    navigation: state.nav
   }
 }
 
-export default connect(mapStateToProps)(Navigator)
+const NavigatorR = connect(mapStateToProps)(Navigator)
+
+export default NavigatorR

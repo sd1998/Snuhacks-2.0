@@ -1,10 +1,18 @@
 import React,{Component} from 'react';
-import {View} from 'react-native';
+import {View,Button} from 'react-native';
+import {NavigationActions} from 'react-navigation';
 
-export default class Home extends Component<>{
+export default class Home extends Component{
 
-  navigateToAttendance(){
- 
+  constructor(props){
+    super(props)
+  }
+
+  navigateToAttendance = () => {
+    const navigate = NavigationActions.navigate({
+      routeName: "Attendance"
+    })
+    this.props.navigation.dispatch(navigate)
   }
 
   render(){
@@ -12,7 +20,7 @@ export default class Home extends Component<>{
       <View>
       <Button
       title="Attendance"
-      onPress={navigateToAttendance}/>
+      onPress={this.navigateToAttendance}/>
       </View>
     )
   }

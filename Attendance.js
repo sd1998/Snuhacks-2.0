@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Platform,StyleSheet,Text,View} from 'react-native';
+import {Platform,StyleSheet,Text,View,Button} from 'react-native';
 const cheerio = require('react-native-cheerio');
 import {connect} from 'react-redux';
 import Actions from './actions.js';
@@ -20,10 +20,10 @@ function mapDispatchToProps(dispatch){
 
 export default class AttendanceComponent extends React.Component{
   constructor(){
-
+    super()
   }
 
-  getAttendance() {
+  getAttendance = () => {
     fetch("https://markattendance.webapps.snu.edu.in/public/application/login/loginAuthSubmit",
     {"method": "POST","credentials":"same-origin",
     "headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -68,7 +68,7 @@ export default class AttendanceComponent extends React.Component{
       <View>
       <Button
       title="Check Attendance"
-      onPress={getAttendance}/>
+      onPress={this.getAttendance}/>
       </View>
     )
   }
