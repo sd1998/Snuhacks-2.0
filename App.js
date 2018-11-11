@@ -1,3 +1,5 @@
+// Do no upgrade react-navigation version(package.json)
+
 import React, {Component} from 'react';
 import {ActivityIndicator} from 'react-native';
 import {createStore,combineReducers,applyMiddleware} from 'redux';

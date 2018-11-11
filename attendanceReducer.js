@@ -10,7 +10,7 @@ const attendanceReducer = (state = initialState,action) => {
     if(state.currentAttendance.length > 0){
       var index = -1
       for(var i=0;i<state.currentAttendance.length;i++){
-        if(state.currentAttendance[i].courseCode == action.payload.CourseCode){
+        if(state.currentAttendance[i].CourseCode == action.payload.CourseCode){
           index = i
           break;
         }

@@ -1,14 +1,16 @@
 import React,{Component} from 'react';
 import {StackNavigator,addNavigationHelpers} from 'react-navigation';
 import {connect} from 'react-redux';
-import AttendanceComponentR from './Attendance.js'
 import Home from './Home.js'
+import AttendanceComponentR from './Attendance.js'
+import MarkAttendance from './MarkAttendance.js';
 
 export const AppNavigator  = new StackNavigator({
   Home: {screen: Home},
-  Attendance: {screen: AttendanceComponentR}
+  Attendance: {screen: AttendanceComponentR},
+  MarkAttendance: {screen: MarkAttendance}
 },{
-  initialRouteName: 'Home'
+  initialRouteName: "Home"
 })
 
 export const InitState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams("Home"))
