@@ -4,11 +4,13 @@ import {connect} from 'react-redux';
 import Home from './Home.js'
 import AttendanceComponentR from './Attendance.js'
 import MarkAttendance from './MarkAttendance.js';
+import AttendanceCreditHoursR from './AttendanceCreditHours.js';
 
 export const AppNavigator  = new StackNavigator({
   Home: {screen: Home},
   Attendance: {screen: AttendanceComponentR},
-  MarkAttendance: {screen: MarkAttendance}
+  MarkAttendance: {screen: MarkAttendance},
+  AttendanceCreditHours: {screen: AttendanceCreditHoursR}
 },{
   initialRouteName: "Home"
 })

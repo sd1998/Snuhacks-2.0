@@ -22,6 +22,13 @@ export default class Home extends Component{
     this.props.navigation.dispatch(navigate)
   }
 
+  navigateToAttendanceCreditHours = () => {
+    const navigate = NavigationActions.navigate({
+      routeName: "AttendanceCreditHours"
+    })
+    this.props.navigation.dispatch(navigate)
+  }
+
   render(){
     return(
       <View>
@@ -31,6 +38,9 @@ export default class Home extends Component{
       <Button
       title="Mark Attendance"
       onPress={this.navigateToMarkAttendance}/>
+      <Button
+      title="Attendance(Credit hours)"
+      onPress={this.navigateToAttendanceCreditHours}/>
       </View>
     )
   }

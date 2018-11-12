@@ -12,6 +12,9 @@ import NavigatorR from './navigator.js';
 import navReducer from './reducer.js';
 import attendanceReducer from './attendanceReducer.js'
 
+  //    <PersistGate loading={<ActivityIndicator size="large" color="#ffffff"/>} persistor={persistor}>
+  //    </PersistGate>
+
 const reducers = combineReducers({
   nav: navReducer,
   attendance: attendanceReducer
@@ -23,18 +26,16 @@ const persistConfig = {
   blacklist: ['nav']
 }
 
-const pReducer = persistReducer(persistConfig,reducers)
-const store = createStore(pReducer,applyMiddleware(logger))
-const persistor = persistStore(store)
+//const pReducer = persistReducer(persistConfig,reducers)
+const store = createStore(reducers,applyMiddleware(logger))
+//const persistor = persistStore(store)
 
 export default class App extends Component<> {
 
   render() {
     return (
       <Provider store={store}>
-      <PersistGate loading={<ActivityIndicator size="large" color="#ffffff"/>} persistor={persistor}>
       <NavigatorR/>
-      </PersistGate>
       </Provider>
     );
   }

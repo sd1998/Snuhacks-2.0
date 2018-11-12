@@ -26,7 +26,8 @@ class AttendanceComponent extends Component{
   getAttendance = () => {
     fetch("https://markattendance.webapps.snu.edu.in/public/application/login/loginAuthSubmit",
     {
-      "method": "POST","credentials":"same-origin",
+      "method": "POST",
+      "credentials":"same-origin",
       "headers":{
         "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
         "accept-language":"en-US,en;q=0.9",

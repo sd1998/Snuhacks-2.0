@@ -1,7 +1,8 @@
 import Constants from './constants.js';
 
 const initialState = {
-  currentAttendance: []
+  currentAttendance: [],
+  attendanceCreditHours: []
 }
 
 const attendanceReducer = (state = initialState,action) => {
@@ -27,6 +28,31 @@ const attendanceReducer = (state = initialState,action) => {
     } else{
       return {
         currentAttendance: [action.payload]
+      }
+    }
+    break;
+    case Constants.UPDATE_CREDIT_HOURS_ATTENDANCE:
+    if(state.attendanceCreditHours.length > 0){
+      var index = -1
+      for(var i=0;i<state.attendanceCreditHours.length;i++){
+        if(state.attendanceCreditHours[i].CourseName.substring(0,state.attendanceCreditHours[i].CourseName.indexOf('-')).trim()
+         == action.payload.CourseName.substring(0,action.payload.CourseName.indexOf('-')).trim()){
+          index = i
+          break;
+        }
+      }
+      if(index == -1){
+        return {
+          attendanceCreditHours: [...state.attendanceCreditHours,action.payload]
+        }
+      } else{
+        return {
+          attendanceCreditHours: [...state.attendanceCreditHours.slice(0,index),action.payload,...state.attendanceCreditHours.slice(index+1)]
+        }
+      }
+    } else{
+      return {
+        attendanceCreditHours: [action.payload]
       }
     }
     break;
