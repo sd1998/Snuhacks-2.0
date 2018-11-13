@@ -9,15 +9,17 @@ import storage from 'redux-persist/lib/storage';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 import NavigatorR from './navigator.js';
-import navReducer from './reducer.js';
-import attendanceReducer from './attendanceReducer.js'
+import navReducer from './navigationReducer.js';
+import attendanceReducer from './attendanceReducer.js';
+import messMenuReducer from './messMenuReducer.js';
 
   //    <PersistGate loading={<ActivityIndicator size="large" color="#ffffff"/>} persistor={persistor}>
   //    </PersistGate>
 
 const reducers = combineReducers({
   nav: navReducer,
-  attendance: attendanceReducer
+  attendance: attendanceReducer,
+  messmenu: messMenuReducer
 })
 
 const persistConfig = {
@@ -27,7 +29,7 @@ const persistConfig = {
 }
 
 //const pReducer = persistReducer(persistConfig,reducers)
-const store = createStore(reducers,applyMiddleware(logger))
+const store = createStore(reducers,applyMiddleware(logger)) //pReducer to be used instead
 //const persistor = persistStore(store)
 
 export default class App extends Component<> {

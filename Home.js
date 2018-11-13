@@ -29,6 +29,13 @@ export default class Home extends Component{
     this.props.navigation.dispatch(navigate)
   }
 
+  navigateToMessMenu = () => {
+    const navigate = NavigationActions.navigate({
+      routeName: "MessMenu"
+    })
+    this.props.navigation.dispatch(navigate)
+  }
+
   render(){
     return(
       <View>
@@ -41,6 +48,9 @@ export default class Home extends Component{
       <Button
       title="Attendance(Credit hours)"
       onPress={this.navigateToAttendanceCreditHours}/>
+      <Button
+      title="Mess Menu"
+      onPress={this.navigateToMessMenu}/>
       </View>
     )
   }

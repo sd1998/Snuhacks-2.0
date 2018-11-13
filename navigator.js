@@ -5,12 +5,14 @@ import Home from './Home.js'
 import AttendanceComponentR from './Attendance.js'
 import MarkAttendance from './MarkAttendance.js';
 import AttendanceCreditHoursR from './AttendanceCreditHours.js';
+import MessMenuComponentR from './MessMenu.js';
 
 export const AppNavigator  = new StackNavigator({
   Home: {screen: Home},
   Attendance: {screen: AttendanceComponentR},
   MarkAttendance: {screen: MarkAttendance},
-  AttendanceCreditHours: {screen: AttendanceCreditHoursR}
+  AttendanceCreditHours: {screen: AttendanceCreditHoursR},
+  MessMenu: {screen: MessMenuComponentR}
 },{
   initialRouteName: "Home"
 })

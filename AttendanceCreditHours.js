@@ -109,12 +109,12 @@ class AttendanceCreditHours extends Component{
                   subdata.TotalAttendance = subd;
                   break;
                 }
+                if(j == 3){
+                  j = 9
+                }
             }
             if(subdata.CourseName){
             this.props.updateCreditHoursAttendance(subdata)
-          }
-          else{
-            console.log(subdata)
           }
           }
           }).catch((err) => {
