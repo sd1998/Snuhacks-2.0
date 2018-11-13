@@ -14,7 +14,6 @@ const messMenuReducer = (state = initialState,action) => {
       dh1Menu: [action.payload.dh1Menu.slice(0)],
       dh2Menu: [action.payload.dh2Menu.slice(0)]
     }
-    break;
     default:
     return state
   }

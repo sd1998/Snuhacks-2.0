@@ -6,6 +6,7 @@ import Actions from './actions.js';
 
 var mapStateToProps = (state) => {
   return {
+    lastUpdate: state.messmenu.lastUpdate,
     dh1Menu: state.messmenu.dh1Menu,
     dh2Menu: state.messmenu.dh2Menu
   }
@@ -46,19 +47,19 @@ class MessMenuComponent extends Component{
            dh2Dinner = dh2Dinner + ", " + $('tbody').children('tr').eq(1).children('td').eq(3).children('p').eq(j).text()
          }
          var today = new Date()
-         this.porps.updateMessMenu({
+         this.props.updateMessMenu({
            lastUpdate: today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear(),
            dh1Menu: [dh1Breakfast,dh1Lunch,dh1Dinner],
            dh2Menu: [dh2Breakfast,dh2Lunch,dh2Dinner]
          })
       }).catch((err) => {
         console.log(err)
-        });
+      });
   }
 
   render(){
     var dateToday = new Date()
-    if(!(this.porps.dh1Menu.length == dateToday.getDate() + '-' + dateToday.getMonth() + '-' + dateToday.getFullYear())){
+    if(!(this.props.lastUpdate == dateToday.getDate() + '-' + dateToday.getMonth() + '-' + dateToday.getFullYear())){
     return(
       <View>
       <Button
