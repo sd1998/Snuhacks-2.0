@@ -36,7 +36,7 @@ class AttendanceComponent extends Component{
         "upgrade-insecure-requests":"1"},
         "referrer":"https://markattendance.webapps.snu.edu.in/public/application/login/login",
         "referrerPolicy":"no-referrer-when-downgrade",
-        "body":"login_user_name=sk261&login_password=Dnisg%4012344",
+        "body":"login_user_name=ms418&login_password=Rakhi%4017",
         "method":"POST",
         "mod//e":"cors"
       }).then((response) => {
