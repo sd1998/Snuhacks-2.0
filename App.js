@@ -12,6 +12,7 @@ import NavigatorR from './navigator.js';
 import navReducer from './navigationReducer.js';
 import attendanceReducer from './attendanceReducer.js';
 import messMenuReducer from './messMenuReducer.js';
+import authReducer from './authReducer.js'
 
   //    <PersistGate loading={<ActivityIndicator size="large" color="#ffffff"/>} persistor={persistor}>
   //    </PersistGate>
@@ -19,7 +20,8 @@ import messMenuReducer from './messMenuReducer.js';
 const reducers = combineReducers({
   nav: navReducer,
   attendance: attendanceReducer,
-  messmenu: messMenuReducer
+  messmenu: messMenuReducer,
+  auth: authReducer
 })
 
 const persistConfig = {

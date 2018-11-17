@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		ySHZt+zBrf80bvD3MWT1XlU3W8c=
+		d7wojbiGAcXHvijfav+WJ65K6tM=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -71,7 +71,7 @@
 		</data>
 		<key>PlugIns/SnuhacksTests.xctest/SnuhacksTests</key>
 		<data>
-		Tag1gHMTF+Ewzlx3FwzoiM+HzeY=
+		Tup6uHYqpkfkcI1LMpbCbNWmPW4=
 		</data>
 		<key>PlugIns/SnuhacksTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
@@ -84,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ySHZt+zBrf80bvD3MWT1XlU3W8c=
+			d7wojbiGAcXHvijfav+WJ65K6tM=
 			</data>
 			<key>hash2</key>
 			<data>
-			hsy5gu3hMBtI9wPzZd9aJ2EbtgzmmDk69pVhlpErI+c=
+			19QcJ8jJAuNaiE5dgx1Ry85ymUOgx2VribXmVti5bxQ=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -229,11 +229,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Tag1gHMTF+Ewzlx3FwzoiM+HzeY=
+			Tup6uHYqpkfkcI1LMpbCbNWmPW4=
 			</data>
 			<key>hash2</key>
 			<data>
-			updvxQmHCBtzO+xeKrpJJtP9KXwhW5J8JmOL5aiwrhM=
+			T9cCs1I3oYWrJKBRdDXlQlkNYs+CC4kXhkSBQdoQ0y0=
 			</data>
 		</dict>
 		<key>PlugIns/SnuhacksTests.xctest/_CodeSignature/CodeResources</key>

@@ -13,10 +13,16 @@ const Actions = {
       payload: creditHoursAttendance
     }
   },
-  updateMessMenu : (messMenu) => {
+  updateMessMenu: (messMenu) => {
     return {
       type: Constants.UPDATE_MESS_MENU,
       payload: messMenu
+    }
+  },
+  updateUserCredentials: (credentials) => {
+    return {
+      Constants.UPDATE_USER_CREDENTIALS,
+      payload: credentials
     }
   }
 }
