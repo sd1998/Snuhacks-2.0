@@ -1,3 +1,7 @@
+ios/build/*
+android/build/*
+
+
 # Xcode
 !**/*.xcodeproj
 !**/*.pbxproj

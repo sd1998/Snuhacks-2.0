@@ -1,4 +1,19 @@
+
+// ***************************************************************
+
 // Do no upgrade react-navigation version(package.json)
+
+/*
+In case of error corresponding to navigator.js
+Run the following commands:-
+
+npm uninstall react-navigation
+npm install --save react-navigation@1.0.0-beta.15
+*/
+
+// Workaround to be added soon.
+
+// ****************************************************************
 
 import React, {Component} from 'react';
 import {ActivityIndicator} from 'react-native';
