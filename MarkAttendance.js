@@ -26,23 +26,20 @@ export default class MarkAttendance extends Component {
         "method":"POST",
         "mod//e":"cors"
     }).then((response) => {
-      fetch("https://markattendance.webapps.snu.edu.in/public/application/index/index",
-       {
-         "credentials":"include",
-         "headers":{
-           "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-           "accept-language":"en-US,en;q=0.9",
-           "upgrade-insecure-requests":"1"},
-           "referrer":"https://markattendance.webapps.snu.edu.in/public/application/index/summary",
-           "referrerPolicy":"no-referrer-when-downgrade",
-           "body":null,
-           "method":"GET",
-           "mode":"cors"
+      fetch("https://markattendance.webapps.snu.edu.in/public/application/index/submit_attendance",
+      {
+      "credentials":"omit",
+      "headers":{},
+      "referrer":"https://markattendance.webapps.snu.edu.in/public/application/index/index",
+      "referrerPolicy":"no-referrer-when-downgrade",
+      "body":null,
+      "method":"POST",
+      "mode":"cors"
        }).then((response) => {
          const $ = cheerio.load(response._bodyText)
          if($('.alert-warning')){
            this.setState({attendanceState: 0})
-           console.log("Attendance not yet started")
+           console.log($.html())
          }
          else if($('.alert-success')){
             this.setState({attendanceState: 1})

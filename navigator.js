@@ -7,6 +7,7 @@ import AttendanceComponentR from './Attendance.js';
 import MarkAttendance from './MarkAttendance.js';
 import AttendanceCreditHoursR from './AttendanceCreditHours.js';
 import MessMenuComponentR from './MessMenu.js';
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 
 export const AppNavigator  = new StackNavigator({
   Login: {screen: LoginR},

@@ -68,7 +68,11 @@ class AttendanceCreditHours extends Component{
             "mode":"cors"
           }).then((response) => {
             const $ = cheerio.load(response._bodyText)
-            for(var i=0;i<$('tbody').children('tr').length;i++){
+            var name = ""
+            name = $('.dropdown-toggle').attr('title','Manage Account').eq(1).text()
+            console.log(name)
+            for(var i=0;i<=$('tbody').children('tr').length+1;i++){
+              console.log(i+ " this is i")
               var subd = ""
               var subdata = {}
               for(var j=0;j < $('tbody').children($('tr')[i]).children('td').length;j++){
