@@ -1,23 +1,23 @@
 dependencies: \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Modules/RCTDevSettings.mm \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Modules/RCTDevSettings.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridge.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridgeModule.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTFrameUpdate.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTInvalidating.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridge+Private.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTEventDispatcher.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Profiler/RCTProfile.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h

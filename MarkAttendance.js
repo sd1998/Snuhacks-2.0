@@ -37,11 +37,11 @@ export default class MarkAttendance extends Component {
       "mode":"cors"
        }).then((response) => {
          const $ = cheerio.load(response._bodyText)
-         if($('.alert-warning')){
+         if($('.alert-warning').length != 0){
            this.setState({attendanceState: 0})
            console.log($.html())
          }
-         else if($('.alert-success')){
+         else if($('.alert-success').length != 0){
             this.setState({attendanceState: 1})
            console.log("Attendance marked successfully")
          }

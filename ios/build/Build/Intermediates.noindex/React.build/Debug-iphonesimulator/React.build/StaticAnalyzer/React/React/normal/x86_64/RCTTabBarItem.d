@@ -1,17 +1,17 @@
 dependencies: \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTTabBarItem.m \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTTabBarItem.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTComponent.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTConvert.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTAnimationType.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTBorderStyle.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTPointerEvents.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/shashvatkedia/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/UIView+React.h
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTTabBarItem.m \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTTabBarItem.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/mayanksaxena/Desktop/Snuhacks-2.0/node_modules/react-native/React/Views/UIView+React.h
