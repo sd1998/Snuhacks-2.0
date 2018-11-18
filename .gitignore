@@ -3,6 +3,7 @@ android/build/*
 
 
 # Xcode
+build/
 !**/*.xcodeproj
 !**/*.pbxproj
 !**/*.xcworkspacedata
@@ -44,6 +45,7 @@ buck-out
 .watchmanconfig
 
 # Android
+build/
 .idea
 .gradle
 local.properties
@@ -56,6 +58,8 @@ android/app/build/*
 .nvm
 /bots/node_modules/
 package-lock.json
+npm-debug.log
+yarn-error.log
 
 # OS X
 .DS_Store
