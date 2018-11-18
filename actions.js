@@ -21,7 +21,7 @@ const Actions = {
   },
   updateUserCredentials: (credentials) => {
     return {
-      Constants.UPDATE_USER_CREDENTIALS,
+      type: Constants.UPDATE_USER_CREDENTIALS,
       payload: credentials
     }
   }

@@ -6,7 +6,8 @@ import Actions from './actions.js'
 
 var mapStateToProps = (state) => {
   return {
-    attendanceCreditHours: state.attendance.attendanceCreditHours
+    attendanceCreditHours: state.attendance.attendanceCreditHours,
+    userCredentials: state.auth.user
   }
 }
 
@@ -49,7 +50,7 @@ class AttendanceCreditHours extends Component{
         "upgrade-insecure-requests":"1"},
         "referrer":"https://markattendance.webapps.snu.edu.in/public/application/login/login",
         "referrerPolicy":"no-referrer-when-downgrade",
-        "body":"login_user_name=sk261&login_password=Dnisg%4012344",
+        "body":"login_user_name=" + this.props.user.username + "&login_password=" + this.props.user.password,
         "method":"POST",
         "mod//e":"cors"
       }).then((response) => {

@@ -8,6 +8,13 @@ export default class Home extends Component{
     super(props)
   }
 
+  navigateToLogin = () => {
+    const navigate = NavigationActions.navigate({
+      routeName: "Login"
+    })
+    this.props.navigation.dispatch(navigate)
+  }
+
   navigateToCheckAttendance = () => {
     const navigate = NavigationActions.navigate({
       routeName: "Attendance"
@@ -39,6 +46,9 @@ export default class Home extends Component{
   render(){
     return(
       <View>
+      <Button
+      title="Login"
+      onPress={this.navigateToLogin}/>
       <Button
       title="Attendance"
       onPress={this.navigateToCheckAttendance}/>

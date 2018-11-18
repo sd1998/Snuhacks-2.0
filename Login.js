@@ -1,17 +1,13 @@
 import React,{Component} from 'react';
 import {View,Button,TextInput,Text} from 'react-native';
 const cheerio = require('react-native-cheerio');
-import Actions from './actions.js'
-
-mapStateToProps = (state) => {
-  return {
-    user: state.auth.user
-  }
-}
+import {connect} from 'react-redux';
+import {NavigationActions} from 'react-navigation';
+import Actions from './actions.js';
 
 mapDispatchToProps = (dispatch) => {
   return {
-    updateUserCredentials = (user) => {
+    updateUserCredentials: (user) => {
       dispatch(Actions.updateUserCredentials(user))
     }
   }
@@ -20,7 +16,7 @@ mapDispatchToProps = (dispatch) => {
 class Login extends Component{
   constructor(props){
     super(props)
-    this.setState = {
+    this.state = {
       username: "",
       password: "",
       errorMessage: ""
@@ -49,9 +45,9 @@ class Login extends Component{
   }
 
   checkUsername = () => {
+    var chars = 0,nums = 0
     for(var i=0;i<this.state.username.length;i++){
       var val = this.state.username.charCodeAt(i)
-      var chars = 0,nums = 0
       if(this.isLChar(val) || this.isUChar(val)){
         chars++
       } else if(this.isNum(val)){
@@ -65,44 +61,61 @@ class Login extends Component{
   }
 
   checkPassword = () => {
+    var specialChar = 0,num = 0,char = 0,uChar = 0
     for(var i=0;i<this.state.password.length;i++){
       var val = this.state.password.charCodeAt(i)
-      var specialChar = 0,num = 0,char = 0
-      if(this.isLChar(val) || this.UChar(val)){
+      if(this.isUChar(val)){
+        uChar = 1
+      }
+      if(this.isLChar(val) || this.isUChar(val)){
         char = 1
       } else if(this.isNum(val)){
         num = 1
       } else{
         specialChar = 1
       }
-      if(num == 1 && char == 1 && specialChar == 1){
+      if(num == 1 && char == 1 && uChar == 1 && specialChar == 1){
         return true
       }
     }
     return false
   }
 
+  navigateToHome = () => {
+    const navigate = NavigationActions.navigate({
+      routeName: "Home"
+    })
+    this.props.navigation.dispatch(navigate)
+  }
+
   signin = () => {
     if(this.state.password.length < 8 || this.state.username.length < 5 || !this.checkUsername() || !this.checkPassword()){
         this.setState({errorMessage: "Invalid credentials"})
     } else{
-      this.setState({errorMessage: ""})
-      fetch("https://prodweb.snu.in/psp/CSPROD/EMPLOYEE/HRMS/?cmd=login",
+      fetch("https://markattendance.webapps.snu.edu.in/public/application/login/loginAuthSubmit",
       {
-        "credentials":"include",
+        "method": "POST",
+        "credentials":"same-origin",
         "headers":{
           "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
           "accept-language":"en-US,en;q=0.9",
           "cache-control":"max-age=0",
-          "upgrade-insecure-requests":"1"
-        },
-        "referrer":"https://snulinks.snu.edu.in/",
-        "referrerPolicy":"no-referrer-when-downgrade",
-        "body":"login_user_name=" + this.state.username + "&login_password=" + encodeUriComponent(this.state.password),
-        "method":"GET",
-        "mode":"cors"
+          "content-type":"application/x-www-form-urlencoded",
+          "upgrade-insecure-requests":"1"},
+          "referrer":"https://markattendance.webapps.snu.edu.in/public/application/login/login",
+          "referrerPolicy":"no-referrer-when-downgrade",
+          "body":"login_user_name=" + this.state.username + "&login_password=" + encodeURIComponent(this.state.password),
+          "method":"POST",
+          "mod//e":"cors"
       }).then((response) => {
-        console.log(response)
+        const $ = cheerio.load(response._bodyText)
+        if($('.alert-warning').length != 0){
+          this.setState({errorMessage: "Incorrect credentials"})
+        } else{
+          this.setState({errorMessage: ""})
+          this.props.updateUserCredentials({username: this.state.username,password: encodeURIComponent(this.state.password)})
+          this.navigateToHome()
+        }
       }).catch((err) => {
         console.log(err)
       });
@@ -119,11 +132,11 @@ class Login extends Component{
       </View>
       <TextInput
       placeholder="Username"
-      onChange={(username) => this.setState({username: username})}/>
+      onChangeText={(username) => this.setState({username: username})}/>
       <TextInput
       plcaholder="Password"
       secureTextEntry
-      onChange={(password) => this.setState({password: password})}/>
+      onChangeText={(password) => this.setState({password: password})}/>
       <Button
       title="Login"
       onPress={this.signin}/>
@@ -132,5 +145,5 @@ class Login extends Component{
   }
 }
 
-var LoginR = connect(mapStateToProps,mapDispatchToProps)(Login)
+var LoginR = connect(null,mapDispatchToProps)(Login)
 export default LoginR

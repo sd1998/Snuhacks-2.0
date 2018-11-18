@@ -1,13 +1,15 @@
 import React,{Component} from 'react';
 import {StackNavigator,addNavigationHelpers} from 'react-navigation';
 import {connect} from 'react-redux';
-import Home from './Home.js'
-import AttendanceComponentR from './Attendance.js'
+import LoginR from './Login.js';
+import Home from './Home.js';
+import AttendanceComponentR from './Attendance.js';
 import MarkAttendance from './MarkAttendance.js';
 import AttendanceCreditHoursR from './AttendanceCreditHours.js';
 import MessMenuComponentR from './MessMenu.js';
 
 export const AppNavigator  = new StackNavigator({
+  Login: {screen: LoginR},
   Home: {screen: Home},
   Attendance: {screen: AttendanceComponentR},
   MarkAttendance: {screen: MarkAttendance},
