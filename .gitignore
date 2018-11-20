@@ -1,6 +1,6 @@
 ios/build/*
 android/build/*
-
+ios/pods/*
 
 # Xcode
 build/
