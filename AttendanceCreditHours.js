@@ -50,7 +50,7 @@ class AttendanceCreditHours extends Component{
         "upgrade-insecure-requests":"1"},
         "referrer":"https://markattendance.webapps.snu.edu.in/public/application/login/login",
         "referrerPolicy":"no-referrer-when-downgrade",
-        "body":"login_user_name=" + this.props.user.username + "&login_password=" + this.props.user.password,
+        "body":"login_user_name=" + this.props.userCredentials.username + "&login_password=" + this.props.userCredentials.password,
         "method":"POST",
         "mod//e":"cors"
       }).then((response) => {

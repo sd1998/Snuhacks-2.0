@@ -82,10 +82,11 @@ class Login extends Component{
   }
 
   navigateToHome = () => {
-    const navigate = NavigationActions.navigate({
-      routeName: "Home"
+    const resetNavigationAction = NavigationActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({routeName: 'Home'})]
     })
-    this.props.navigation.dispatch(navigate)
+    this.props.navigation.dispatch(resetNavigationAction)
   }
 
   signin = () => {

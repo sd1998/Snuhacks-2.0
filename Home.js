@@ -1,67 +1,33 @@
 import React,{Component} from 'react';
-import {View,Button} from 'react-native';
-import {NavigationActions} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation';
+import AttendanceComponentR from './Attendance.js';
+import MarkAttendanceR from './MarkAttendance.js';
+import AttendanceCreditHoursR from './AttendanceCreditHours.js';
+import MessMenuComponentR from './MessMenu.js';
+
+const HomeNavigator = createBottomTabNavigator({
+  Attendance: {
+    screen: AttendanceComponentR
+  },
+  MarkAttendance: {
+    screen: MarkAttendanceR
+  },
+  AttendanceCrH: {
+    screen: AttendanceCreditHoursR
+  },
+  MessMenu: {
+    screen: MessMenuComponentR
+  }
+})
 
 export default class Home extends Component{
-
   constructor(props){
     super(props)
   }
 
-  navigateToLogin = () => {
-    const navigate = NavigationActions.navigate({
-      routeName: "Login"
-    })
-    this.props.navigation.dispatch(navigate)
-  }
-
-  navigateToCheckAttendance = () => {
-    const navigate = NavigationActions.navigate({
-      routeName: "Attendance"
-    })
-    this.props.navigation.dispatch(navigate)
-  }
-
-  navigateToMarkAttendance = () => {
-    const navigate = NavigationActions.navigate({
-      routeName: "MarkAttendance"
-    })
-    this.props.navigation.dispatch(navigate)
-  }
-
-  navigateToAttendanceCreditHours = () => {
-    const navigate = NavigationActions.navigate({
-      routeName: "AttendanceCreditHours"
-    })
-    this.props.navigation.dispatch(navigate)
-  }
-
-  navigateToMessMenu = () => {
-    const navigate = NavigationActions.navigate({
-      routeName: "MessMenu"
-    })
-    this.props.navigation.dispatch(navigate)
-  }
-
   render(){
     return(
-      <View>
-      <Button
-      title="Login"
-      onPress={this.navigateToLogin}/>
-      <Button
-      title="Attendance"
-      onPress={this.navigateToCheckAttendance}/>
-      <Button
-      title="Mark Attendance"
-      onPress={this.navigateToMarkAttendance}/>
-      <Button
-      title="Attendance(Credit hours)"
-      onPress={this.navigateToAttendanceCreditHours}/>
-      <Button
-      title="Mess Menu"
-      onPress={this.navigateToMessMenu}/>
-      </View>
+      <HomeNavigator/>
     )
   }
 }

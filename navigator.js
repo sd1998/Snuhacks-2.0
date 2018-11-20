@@ -1,45 +1,36 @@
-import React,{Component} from 'react';
-import {StackNavigator,addNavigationHelpers} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation';
+import {reduxifyNavigator,createReactNavigationReduxMiddleware,createNavigationReducer} from 'react-navigation-redux-helpers';
+import {addNavigationHelpers} from 'react-navigation';
 import {connect} from 'react-redux';
 import LoginR from './Login.js';
 import Home from './Home.js';
-import AttendanceComponentR from './Attendance.js';
-import MarkAttendance from './MarkAttendance.js';
-import AttendanceCreditHoursR from './AttendanceCreditHours.js';
-import MessMenuComponentR from './MessMenu.js';
-import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 
-export const AppNavigator  = new StackNavigator({
-  Login: {screen: LoginR},
-  Home: {screen: Home},
-  Attendance: {screen: AttendanceComponentR},
-  MarkAttendance: {screen: MarkAttendance},
-  AttendanceCreditHours: {screen: AttendanceCreditHoursR},
-  MessMenu: {screen: MessMenuComponentR}
+const AppNavigator  = createStackNavigator({
+  Login: {
+    screen: LoginR,
+    navigationOptions: {
+      headerLeft: null
+    }
+  },
+  Home: {screen: Home}
 },{
-  initialRouteName: "Home"
+  initialRouteName: "Login"
 })
 
-export const InitState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams("Home"))
+export const navReducer = createNavigationReducer(AppNavigator)
 
-class Navigator extends Component<>{
-  render(){
-    return(
-      <AppNavigator navigation={addNavigationHelpers({
-        dispatch: this.props.dispatch,
-        state: this.props.navigation
-      })}
-      />
-    )
-  }
-}
+export const navigationReduxMiddleware = createReactNavigationReduxMiddleware(
+  "root",
+  state => state.nav
+)
+
+const Navigator = reduxifyNavigator(AppNavigator,"root")
 
 const mapStateToProps = function(state){
   return {
-    navigation: state.nav
+    state: state.nav
   }
 }
 
 const NavigatorR = connect(mapStateToProps)(Navigator)
-
 export default NavigatorR

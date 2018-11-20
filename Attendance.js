@@ -6,7 +6,8 @@ import Actions from './actions.js';
 
 function mapStateToProps(state){
   return {
-    currentAttendance: state.attendance.currentAttendance
+    currentAttendance: state.attendance.currentAttendance,
+    userCredentials: stat.auth.user
   }
 }
 
@@ -36,7 +37,7 @@ class AttendanceComponent extends Component{
         "upgrade-insecure-requests":"1"},
         "referrer":"https://markattendance.webapps.snu.edu.in/public/application/login/login",
         "referrerPolicy":"no-referrer-when-downgrade",
-        "body":"login_user_name=ms418&login_password=Rakhi%4017",
+        "body":"login_user_name=" + this.props.userCredentials.username + "&login_password=" + this.props.userCredentials.password,
         "method":"POST",
         "mod//e":"cors"
       }).then((response) => {
