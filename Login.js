@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {View,Button,TextInput,Text} from 'react-native';
 const cheerio = require('react-native-cheerio');
 import {connect} from 'react-redux';
-import {NavigationActions} from 'react-navigation';
+import {NavigationActions,StackActions} from 'react-navigation';
 import Actions from './actions.js';
 
 mapDispatchToProps = (dispatch) => {
@@ -82,7 +82,7 @@ class Login extends Component{
   }
 
   navigateToHome = () => {
-    const resetNavigationAction = NavigationActions.reset({
+    const resetNavigationAction = StackActions.reset({
       index: 0,
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     })

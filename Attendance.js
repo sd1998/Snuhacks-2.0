@@ -7,7 +7,7 @@ import Actions from './actions.js';
 function mapStateToProps(state){
   return {
     currentAttendance: state.attendance.currentAttendance,
-    userCredentials: stat.auth.user
+    userCredentials: state.auth.user
   }
 }
 

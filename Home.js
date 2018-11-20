@@ -1,11 +1,11 @@
 import React,{Component} from 'react';
-import {createBottomTabNavigator} from 'react-navigation';
+import {createBottomTabNavigator,createStackNavigator} from 'react-navigation';
 import AttendanceComponentR from './Attendance.js';
 import MarkAttendanceR from './MarkAttendance.js';
 import AttendanceCreditHoursR from './AttendanceCreditHours.js';
 import MessMenuComponentR from './MessMenu.js';
 
-const HomeNavigator = createBottomTabNavigator({
+const Navigator = createBottomTabNavigator({
   Attendance: {
     screen: AttendanceComponentR
   },
@@ -20,14 +20,5 @@ const HomeNavigator = createBottomTabNavigator({
   }
 })
 
-export default class Home extends Component{
-  constructor(props){
-    super(props)
-  }
-
-  render(){
-    return(
-      <HomeNavigator/>
-    )
-  }
-}
+const TabNavigator = createStackNavigator({Navigator},{headerMode: "none"})
+export default TabNavigator

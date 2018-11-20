@@ -3,7 +3,7 @@ import {reduxifyNavigator,createReactNavigationReduxMiddleware,createNavigationR
 import {addNavigationHelpers} from 'react-navigation';
 import {connect} from 'react-redux';
 import LoginR from './Login.js';
-import Home from './Home.js';
+import TabNavigator from './Home.js';
 
 const AppNavigator  = createStackNavigator({
   Login: {
@@ -12,7 +12,7 @@ const AppNavigator  = createStackNavigator({
       headerLeft: null
     }
   },
-  Home: {screen: Home}
+  Home: {screen: TabNavigator}
 },{
   initialRouteName: "Login"
 })
