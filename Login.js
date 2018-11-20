@@ -5,6 +5,12 @@ import {connect} from 'react-redux';
 import {NavigationActions,StackActions} from 'react-navigation';
 import Actions from './actions.js';
 
+mapStateToProps = (state) => {
+  return {
+    user: state.auth.user
+  }
+}
+
 mapDispatchToProps = (dispatch) => {
   return {
     updateUserCredentials: (user) => {
@@ -21,6 +27,12 @@ class Login extends Component{
       password: "",
       errorMessage: ""
     }
+  }
+
+  componentWillMount(){
+    if(this.props.user != null){
+      this.navigateToHome()
+    } 
   }
 
   isLChar = (val) => {
@@ -146,5 +158,5 @@ class Login extends Component{
   }
 }
 
-var LoginR = connect(null,mapDispatchToProps)(Login)
+var LoginR = connect(mapStateToProps,mapDispatchToProps)(Login)
 export default LoginR

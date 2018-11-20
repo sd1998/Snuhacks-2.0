@@ -32,7 +32,7 @@ const attendanceReducer = (state = initialState,action) => {
     }
     break;
     case Constants.UPDATE_CREDIT_HOURS_ATTENDANCE:
-    if(state.attendanceCreditHours.length > 0){
+    if(state.attendanceCreditHours.length > 0 && state.attendanceCreditHours[0] != null){
       var index = -1
       for(var i=0;i<state.attendanceCreditHours.length;i++){
         if(state.attendanceCreditHours[i].CourseName.substring(0,state.attendanceCreditHours[i].CourseName.indexOf('-')).trim()

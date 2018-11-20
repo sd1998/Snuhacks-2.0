@@ -10,9 +10,11 @@ import authReducer from './authReducer.js'
 import {createStore,combineReducers,applyMiddleware} from 'redux';
 import {persistStore,persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import Constants from './constants.js';
 
+  //Redux Persist desabled for testing purposes
   //    <PersistGate loading={<ActivityIndicator size="large" color="#ffffff"/>} persistor={persistor}>
-  //    </PersistGate>
+  //     </PersistGate>
 
 const reducers = combineReducers({
   nav: navReducer,
@@ -21,15 +23,26 @@ const reducers = combineReducers({
   auth: authReducer
 })
 
+const rootReducer = (state,action) => {
+  if(action.type == Constants.USER_LOGOUT){
+    // To be used with Redux Persist
+  //  Object.keys(state).forEach((key) => {
+  //    storage.removeItem(`persist:${key}`)
+  //  })
+    state = undefined
+  }
+  return reducers(state,action)
+}
+
 const persistConfig = {
   key: 'root',
   storage: storage,
   blacklist: ['nav']
 }
 
-//const pReducer = persistReducer(persistConfig,reducers)
-const store = createStore(reducers,applyMiddleware(logger,navigationReduxMiddleware))
-//pReducer to be used instead
+//const pReducer = persistReducer(persistConfig,rootReducer)
+const store = createStore(rootReducer,applyMiddleware(logger,navigationReduxMiddleware))
+//change to pReducer when using Redux Persist
 //const persistor = persistStore(store)
 
 
