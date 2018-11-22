@@ -71,19 +71,21 @@ class MarkAttendance extends Component {
         <View>
         </View>
       )
-      break;
       case 0:
       return (
         <View>
         </View>
       )
-      break;
       case 1:
       return (
         <View>
         </View>
       )
-      break;
+      default:
+      return (
+        <View>
+        </View>
+      )
     }
   }
 }
