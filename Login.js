@@ -30,9 +30,10 @@ class Login extends Component{
   }
 
   componentWillMount(){
-    if(this.props.user != null){
+    if(this.props.user.username != null){
+      console.log(this.props.user)
       this.navigateToHome()
-    } 
+    }
   }
 
   isLChar = (val) => {

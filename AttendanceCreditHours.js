@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
-import {View,Button} from 'react-native';
+import {View,Button, FlatList} from 'react-native';
 const cheerio = require('react-native-cheerio');
 import {connect} from 'react-redux'
 import Actions from './actions.js'
+import {List, ListItem } from 'react-native-elements'
 
 var mapStateToProps = (state) => {
   return {
@@ -136,6 +137,18 @@ class AttendanceCreditHours extends Component{
       <Button
       title="Refresh"
       onPress={this.getAttendanceCreditHours}/>
+      <List>
+       <FlatList
+        data = {this.props.attendanceCreditHours}
+        renderItem = {({item}) => (
+          <ListItem
+          roundAvatar
+            title = {item.CourseName}
+            subtitle = {item.TotalAttendance}
+          />
+         )}
+       />
+    </List>
       </View>
     )
   }

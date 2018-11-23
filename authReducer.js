@@ -1,7 +1,10 @@
 import Constants from './constants.js'
 
 const initialState = {
-  user: {}
+  user: {
+    username: "sk261",
+    password: "Dnisg%4012344"
+  }
 }
 
 const authReducer = (state = initialState,action) => {
