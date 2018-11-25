@@ -28,7 +28,7 @@ class Navigator extends Component{
       pressColor: 'rgba(255, 255, 255, 0.16)'
     },
     {
-      key: 'Mess Menu',
+      key: 'MessMenu',
       label: 'MessMenu',
       barColor: '#E64A19',
       pressColor: 'rgba(255, 255, 255, 0.16)'
@@ -69,7 +69,7 @@ class Navigator extends Component{
            this.state.activeTab == 'AttCrH' && <AttendanceCreditHoursR/>
          }
          {
-           this.state.activeTav == 'MessMenu' && <MessMenuComponentR/>
+           this.state.activeTab == 'MessMenu' && <MessMenuComponentR/>
          }
        </View>
        <BottomNavigation

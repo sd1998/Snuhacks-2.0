@@ -27,6 +27,7 @@ class MessMenuComponent extends Component{
 
   getMessMenu = () => {
       fetch("http://messmenu.snu.in/messMenu.php").then((response) => {
+        console.log(response)
          const $ = cheerio.load(response._bodyText)
          var dh1Breakfast = ""
          var dh1Lunch = ""
