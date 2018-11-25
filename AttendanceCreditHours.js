@@ -1,9 +1,10 @@
 import React,{Component} from 'react';
-import {View,Button, FlatList} from 'react-native';
+import {View,Button, FlatList,TouchableOpacity,Text} from 'react-native';
 const cheerio = require('react-native-cheerio');
 import {connect} from 'react-redux'
 import Actions from './actions.js'
 import {List, ListItem } from 'react-native-elements'
+import Dialog, { DialogContent } from 'react-native-popup-dialog';
 
 var mapStateToProps = (state) => {
   return {
@@ -23,6 +24,10 @@ var mapDispatchToProps = (dispatch) => {
 class AttendanceCreditHours extends Component{
   constructor(props){
     super(props)
+    this.state = {
+      visible: false,
+      courseName: ""
+    }
   }
 
   getAttendanceObject = (subd) => {
@@ -141,13 +146,39 @@ class AttendanceCreditHours extends Component{
        <FlatList
         data = {this.props.attendanceCreditHours}
         renderItem = {({item}) => (
+          <TouchableOpacity onPress= {() => {
+            this.setState({
+              courseName: item.CourseName,
+              visible: true
+            }
+            )
+          }}>
           <ListItem
           roundAvatar
             title = {item.CourseName}
             subtitle = {item.TotalAttendance}
           />
+          </TouchableOpacity>
          )}
        />
+       <Dialog
+    visible={this.state.visible}
+    onTouchOutside={() => {
+      this.setState({ visible: false });
+    }}
+  >
+  <DialogContent>
+      <Text> {this.state.courseName} </Text>
+      <Button
+      onPress={() => {
+        this.setState({
+          visible: false,
+          courseName: ""
+        })
+      }}
+      title="Close"/>
+    </DialogContent>
+  </Dialog>
     </List>
       </View>
     )
